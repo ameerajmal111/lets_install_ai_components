@@ -1,0 +1,62 @@
+WSL stands for Windows Subsystem for Linux. 
+    It is a Windows feature that allows users to run a GNU/Linux environmen
+
+WSL commands:        open powershell in ADMIN mode
+
+version check:
+      wsl --list -v    
+      wsl –version
+      wsl –status
+
+Installation:
+  WSL:
+          wsl --install
+          this will install ubuntu in windows
+          it will take you to default linux mount created in windows as below
+                    aab@LAPTOP-BQG3KNAN:/mnt/c$
+                to come out of mount type:
+                    aab@LAPTOP-BQG3KNAN:/mnt/c$ exit    <--
+    
+      check installed components in WSL:
+          PS C:\> wsl --list -v
+    
+                NAME      STATE           VERSION
+              * Ubuntu    Stopped         2
+    
+      to start ubuntu in WSL:
+            PS C:\> wsl -d ubuntu
+  zstd:   on WSL
+         sudo apt-get install zstd
+
+  ollama:  on WSL
+        curl -fsSL https://ollama.com/install.sh | sh
+
+  @larksuiteoapi/node-sdk:   on WSL
+        npm install @larksuiteoapi/node-sdk
+    
+  openclaw:  on WSL
+        curl -fsSL https://openclaw.ai/install.sh | bash        
+
+uninstall openclaw: (use npm uninstall)   (check bouth on MOUNT or C:\ drive where ever its installed)
+
+aab@LAPTOP-BQG3KNAN:/mnt/c$ openclaw uninstall --all --yes       <-- this will not work   
+
+            🦞 OpenClaw 2026.4.21 (f788c88) — Your AI assistant, now without the $3,499 headset.
+            
+            Recommended first: openclaw backup create
+            Stopped systemd service: openclaw-gateway.service
+            Removed systemd service: /home/aab/.config/systemd/user/openclaw-gateway.service
+            Removed ~/.openclaw
+            Removed ~/.openclaw/workspace                        <-- even though it says its removed you can still see the intalled version
+            CLI still installed. Remove via npm/pnpm if desired.
+
+aab@LAPTOP-BQG3KNAN:/mnt/c$ openclaw --version
+OpenClaw 2026.4.21 (f788c88)                                     <-- even though it says its removed you can still see the intalled version
+
+aab@LAPTOP-BQG3KNAN:/mnt/c$ npm uninstall -g openclaw            <-- use npm uninstall
+
+removed 454 packages in 3s
+aab@LAPTOP-BQG3KNAN:/mnt/c$ openclaw --version
+-bash: /home/aab/.npm-global/bin/openclaw: No such file or directory        <--  no version found on MOUNT
+
+
