@@ -60,3 +60,7 @@ aab@LAPTOP-BQG3KNAN:/mnt/c$ openclaw --version
 -bash: /home/aab/.npm-global/bin/openclaw: No such file or directory        <--  no version found on MOUNT
 
 
+to unintsall WSL from WINDOWS:
+https://www.youtube.com/watch?v=6B4DromZhoA
+
+
